@@ -2,7 +2,7 @@ import { fetchAuthSession } from "aws-amplify/auth";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
-async function authHeaders(): Promise<HeadersInit> {
+async function authHeaders(): Promise<Record<string, string>> {
   const { tokens } = await fetchAuthSession();
   return {
     "Content-Type":  "application/json",
