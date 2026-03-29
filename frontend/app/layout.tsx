@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import React from "react";
 import "./globals.css";
-import AmplifyProvider from "./components/AmplifyProvider";
+import dynamic from "next/dynamic";
 import AuthButton from "./components/AuthButton";
+
+const AmplifyProvider = dynamic(() => import("./components/AmplifyProvider"), { ssr: false });
 
 export const metadata: Metadata = {
   title:       "Project Polly",
