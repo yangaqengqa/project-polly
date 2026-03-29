@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { fetchAuthSession, signInWithRedirect, signOut } from "aws-amplify/auth";
 import { Hub } from "aws-amplify/utils";
+import "../../lib/amplify-config";
 
 export default function AuthButton() {
   const [email, setEmail]     = useState<string | null>(null);
