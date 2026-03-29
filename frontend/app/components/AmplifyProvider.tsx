@@ -5,8 +5,8 @@ import { Amplify } from "aws-amplify";
 Amplify.configure({
   Auth: {
     Cognito: {
-      userPoolId:       "us-east-1_vcC1h21YG",
-      userPoolClientId: "64i757bkb86fto0sccja1cjrrd",
+      userPoolId:       "us-east-1_VsKleKMOt",
+      userPoolClientId: "6e9k91krped2j1rbngqcfcg2ai",
       loginWith: {
         oauth: {
           domain:          "project-polly-auth-039612868851.auth.us-east-1.amazoncognito.com",
