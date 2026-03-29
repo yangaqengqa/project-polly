@@ -13,5 +13,5 @@ variable "project_name" {
 variable "frontend_url" {
   description = "Vercel frontend URL (update after first Vercel deploy)"
   type        = string
-  default     = "https://your-app.vercel.app"
+  default     = "https://project-polly-rho.vercel.app"
 }
