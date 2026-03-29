@@ -2,19 +2,19 @@
 import { useEffect, useState } from "react";
 import { fetchAuthSession, signInWithRedirect, signOut } from "aws-amplify/auth";
 import { Hub } from "aws-amplify/utils";
-import "../../lib/amplify-config";
+import { useAmplifyReady } from "./AmplifyProvider";
 
 export default function AuthButton() {
-  const [email, setEmail]     = useState<string | null>(null);
-  const [ready, setReady]     = useState(false);
+  const amplifyReady = useAmplifyReady();
+  const [email, setEmail] = useState<string | null>(null);
+  const [ready, setReady] = useState(false);
 
   async function loadUser() {
     try {
       const session = await fetchAuthSession();
       const idToken = session.tokens?.idToken;
       if (idToken) {
-        const payload = idToken.payload;
-        setEmail((payload["email"] as string) ?? null);
+        setEmail((idToken.payload["email"] as string) ?? null);
       } else {
         setEmail(null);
       }
@@ -26,6 +26,7 @@ export default function AuthButton() {
   }
 
   useEffect(() => {
+    if (!amplifyReady) return;
     loadUser();
 
     const unsubscribe = Hub.listen("auth", ({ payload }) => {
@@ -43,9 +44,9 @@ export default function AuthButton() {
     });
 
     return unsubscribe;
-  }, []);
+  }, [amplifyReady]);
 
-  if (!ready) return null;
+  if (!amplifyReady || !ready) return null;
 
   if (email) {
     return (
