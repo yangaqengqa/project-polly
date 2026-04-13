@@ -5,7 +5,7 @@ resource "aws_cognito_user_pool" "main" {
 
   verification_message_template {
     default_email_option = "CONFIRM_WITH_CODE"
-    email_subject        = "Your Project Polly verification code"
+    email_subject        = "Your VerbaSonare verification code"
     email_message        = "Your verification code is {####}"
   }
 

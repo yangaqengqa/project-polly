@@ -1,0 +1,252 @@
+<mxfile host="app.diagrams.net" agent="draw.io">
+  <diagram name="Project Polly Architecture" id="project-polly-arch-v8">
+    <mxGraphModel dx="2020" dy="1110" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-bg" parent="1" style="rounded=0;strokeColor=none;fillColor=#232F3E;" value="" vertex="1">
+          <mxGeometry height="60" width="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="title-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#FFFFFF;" value="Project Polly — Serverless Text-to-Speech Architecture on AWS" vertex="1">
+          <mxGeometry height="60" width="1560" as="geometry" />
+        </mxCell>
+        <mxCell id="title-stack" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#FF9900;" value="Next.js  ·  Cognito  ·  API Gateway  ·  Lambda  ·  Polly  ·  S3  ·  DynamoDB  ·  CloudWatch  ·  Terraform  ·  Jenkins  ·  Vercel" vertex="1">
+          <mxGeometry height="60" width="980" x="900" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-client" parent="1" style="rounded=1;arcSize=4;strokeColor=#93C5FD;fillColor=#EFF6FF;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;fontSize=11;fontStyle=1;fontColor=#1D4ED8;pointerEvents=0;" value="Client" vertex="1">
+          <mxGeometry height="500" width="122" x="20" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-vercel" parent="1" style="rounded=1;arcSize=4;strokeColor=#C4B5FD;fillColor=#F5F3FF;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;fontSize=11;fontStyle=1;fontColor=#6D28D9;pointerEvents=0;" value="▲  Vercel · Frontend" vertex="1">
+          <mxGeometry height="500" width="222" x="152" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-aws" parent="1" style="rounded=1;arcSize=2;strokeColor=#232F3E;fillColor=#FAFAFA;align=left;verticalAlign=top;spacingTop=8;spacingLeft=12;fontSize=13;fontStyle=1;fontColor=#232F3E;pointerEvents=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;grStroke=1;" value="AWS Cloud" vertex="1">
+          <mxGeometry height="500" width="1476" x="384" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-auth" parent="1" style="rounded=1;arcSize=4;strokeColor=#BF0816;fillColor=none;align=left;verticalAlign=top;spacingTop=6;spacingLeft=10;fontSize=10;fontStyle=1;fontColor=#BF0816;pointerEvents=0;" value="Authentication" vertex="1">
+          <mxGeometry height="172" width="188" x="398" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-api" parent="1" style="rounded=1;arcSize=4;strokeColor=#E7157B;fillColor=none;align=left;verticalAlign=top;spacingTop=6;spacingLeft=10;fontSize=10;fontStyle=1;fontColor=#E7157B;pointerEvents=0;" value="API Layer" vertex="1">
+          <mxGeometry height="172" width="188" x="602" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-comp" parent="1" style="rounded=1;arcSize=4;strokeColor=#FF9900;fillColor=none;align=left;verticalAlign=top;spacingTop=6;spacingLeft=10;fontSize=10;fontStyle=1;fontColor=#FF9900;pointerEvents=0;" value="Compute" vertex="1">
+          <mxGeometry height="172" width="188" x="806" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-ml" parent="1" style="rounded=1;arcSize=4;strokeColor=#01A88D;fillColor=none;align=left;verticalAlign=top;spacingTop=6;spacingLeft=10;fontSize=10;fontStyle=1;fontColor=#01A88D;pointerEvents=0;" value="AI / ML" vertex="1">
+          <mxGeometry height="172" width="188" x="1010" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-store" parent="1" style="rounded=1;arcSize=4;strokeColor=#3F8624;fillColor=none;align=left;verticalAlign=top;spacingTop=6;spacingLeft=10;fontSize=10;fontStyle=1;fontColor=#3F8624;pointerEvents=0;" value="Storage" vertex="1">
+          <mxGeometry height="172" width="188" x="1214" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-db" parent="1" style="rounded=1;arcSize=4;strokeColor=#4053D6;fillColor=none;align=left;verticalAlign=top;spacingTop=6;spacingLeft=10;fontSize=10;fontStyle=1;fontColor=#4053D6;pointerEvents=0;" value="Database" vertex="1">
+          <mxGeometry height="172" width="188" x="1418" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-iam" parent="1" style="rounded=1;arcSize=4;strokeColor=#BF0816;fillColor=none;align=left;verticalAlign=top;spacingTop=6;spacingLeft=10;fontSize=10;fontStyle=1;fontColor=#BF0816;pointerEvents=0;" value="Identity &amp; Access" vertex="1">
+          <mxGeometry height="162" width="188" x="398" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="sub-mgmt" parent="1" style="rounded=1;arcSize=4;strokeColor=#E05C43;fillColor=none;align=left;verticalAlign=top;spacingTop=6;spacingLeft=10;fontSize=10;fontStyle=1;fontColor=#E05C43;pointerEvents=0;" value="Management" vertex="1">
+          <mxGeometry height="162" width="420" x="602" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-cicd" parent="1" style="rounded=1;arcSize=3;strokeColor=#94A3B8;fillColor=#F8FAFC;align=left;verticalAlign=top;spacingTop=8;spacingLeft=14;fontSize=11;fontStyle=1;fontColor=#475569;pointerEvents=0;" value="CI/CD Pipeline  (GitHub → Jenkins → Terraform → Deploy)" vertex="1">
+          <mxGeometry height="190" width="1860" x="20" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="shape=image;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2060%22%3E%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2210%22%20fill%3D%22%231A73E8%22%2F%3E%3Cg%20transform%3D%22translate%288%208%29%20scale%281.833%29%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M12%200C8.21%200%204.831%201.757%202.632%204.501l3.953%206.848A5.454%205.454%200%200%201%2012%206.545h10.691A12%2012%200%200%200%2012%200zM1.931%205.47A11.943%2011.943%200%200%200%200%2012c0%206.012%204.42%2010.991%2010.189%2011.864l3.953-6.847a5.45%205.45%200%200%201-6.865-2.29zm13.342%202.166a5.446%205.446%200%200%201%201.45%207.09l.002.001h-.002l-5.344%209.257c.206.01.413.016.621.016%206.627%200%2012-5.373%2012-12%200-1.54-.29-3.011-.818-4.364zM12%2010.545a1.455%201.455%200%201%200%200%202.91%201.455%201.455%200%200%200%200-2.91z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;fillColor=none;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="51" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="user-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Browser" vertex="1">
+          <mxGeometry height="18" width="88" x="37" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs" parent="1" style="shape=image;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2060%22%3E%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2210%22%20fill%3D%22%23111111%22%2F%3E%3Cg%20transform%3D%22translate%288%208%29%20scale%281.833%29%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M11.572%200c-.176%200-.31.001-.358.007a19.76%2019.76%200%200%201-.364.033C7.443.346%204.25%202.185%202.228%205.012a11.875%2011.875%200%200%200-2.119%205.243c-.096.659-.108.854-.108%201.747s.012%201.089.108%201.748c.652%204.506%203.86%208.292%208.209%209.695.779.25%201.6.422%202.534.525.363.04%201.935.04%202.299%200%201.611-.178%202.977-.577%204.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739%20338.739%200%200%200-2.422-3.556c-.009-.002-.018%201.579-.023%203.51-.007%203.38-.01%203.515-.052%203.595a.426.426%200%200%201-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438%200%200%201-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645%200%200%201%20.174-.143c.096-.047.134-.051.54-.051.478%200%20.558.018.682.154.035.038%201.337%201.999%202.895%204.361a10760.433%2010760.433%200%200%200%204.735%207.17l1.9%202.879.096-.063a12.317%2012.317%200%200%200%202.466-2.163%2011.944%2011.944%200%200%200%202.824-6.134c.096-.66.108-.854.108-1.748%200-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597%2012.597%200%200%200-2.499-.523A33.119%2033.119%200%200%200%2011.573%200zm4.069%207.217c.347%200%20.408.005.486.047a.473.473%200%200%201%20.237.277c.018.06.023%201.365.018%204.304l-.006%204.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478%200%200%201%20.233-.296c.096-.05.14-.056.499-.056z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;fillColor=none;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="233" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="nextjs-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Next.js 14" vertex="1">
+          <mxGeometry height="18" width="88" x="219" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="amplify" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#FF9900;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.amplify;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="233" y="322" as="geometry" />
+        </mxCell>
+        <mxCell id="amplify-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Amplify SDK" vertex="1">
+          <mxGeometry height="18" width="88" x="219" y="386" as="geometry" />
+        </mxCell>
+        <mxCell id="cognito" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#BF0816;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cognito;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="461" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="cognito-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Cognito" vertex="1">
+          <mxGeometry height="18" width="88" x="447" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="apigw" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="665" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="lambda" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#FF9900;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="869" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="lambda-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Lambda" vertex="1">
+          <mxGeometry height="18" width="88" x="855" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="polly" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#01A88D;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.polly;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="1073" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="polly-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Amazon Polly" vertex="1">
+          <mxGeometry height="18" width="88" x="1059" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#3F8624;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="1277" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="s3-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Amazon S3" vertex="1">
+          <mxGeometry height="18" width="88" x="1263" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="dynamodb" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#4053D6;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="1481" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="dynamodb-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="DynamoDB" vertex="1">
+          <mxGeometry height="18" width="88" x="1467" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="iam" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#BF0816;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.role;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="461" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="iam-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="IAM Role" vertex="1">
+          <mxGeometry height="18" width="88" x="447" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="cloudwatch" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E05C43;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="761" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="cloudwatch-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="CloudWatch" vertex="1">
+          <mxGeometry height="18" width="88" x="747" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="github" parent="1" style="shape=image;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2060%22%3E%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2210%22%20fill%3D%22%2324292E%22%2F%3E%3Cg%20transform%3D%22translate%288%208%29%20scale%281.833%29%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M12%20.297c-6.63%200-12%205.373-12%2012%200%205.303%203.438%209.8%208.205%2011.385.6.113.82-.258.82-.577%200-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422%2018.07%203.633%2017.7%203.633%2017.7c-1.087-.744.084-.729.084-.729%201.205.084%201.838%201.236%201.838%201.236%201.07%201.835%202.809%201.305%203.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93%200-1.31.465-2.38%201.235-3.22-.135-.303-.54-1.523.105-3.176%200%200%201.005-.322%203.3%201.23.96-.267%201.98-.399%203-.405%201.02.006%202.04.138%203%20.405%202.28-1.552%203.285-1.23%203.285-1.23.645%201.653.24%202.873.12%203.176.765.84%201.23%201.91%201.23%203.22%200%204.61-2.805%205.625-5.475%205.92.42.36.81%201.096.81%202.22%200%201.606-.015%202.896-.015%203.286%200%20.315.21.69.825.57C20.565%2022.092%2024%2017.592%2024%2012.297c0-6.627-5.373-12-12-12%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;fillColor=none;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="210" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="github-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="GitHub" vertex="1">
+          <mxGeometry height="18" width="88" x="196" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="jenkins" parent="1" style="shape=image;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2060%22%3E%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2210%22%20fill%3D%22%23000000%22%2F%3E%3Cg%20transform%3D%22translate%285%205%29%20scale%281.5625%29%22%3E%3Cpath%20d%3D%22M27.295%2015.42c0%206.34-5.025%2011.48-11.223%2011.48S4.85%2021.76%204.85%2015.42%209.874%203.94%2016.072%203.94s11.223%205.14%2011.223%2011.48%22%20fill-rule%3D%22evenodd%22%20fill%3D%22%23d33833%22%2F%3E%3Cpath%20d%3D%22M5.306%2018.263S4.494%206.292%2015.524%205.95l-.77-1.283-5.986%202-1.7%201.967-1.496%202.865-.855%203.335.257%202.223%22%20fill%3D%22%23ef3d3a%22%2F%3E%3Cpath%20d%3D%22M8.385%207.59c-1.97%202.015-3.188%204.797-3.188%207.874s1.22%205.86%203.188%207.873%204.685%203.257%207.687%203.257%205.717-1.243%207.687-3.257%203.188-4.797%203.188-7.873-1.22-5.86-3.188-7.874-4.685-3.257-7.687-3.257-5.717%201.243-7.687%203.257zm-.498%2016.235c-2.093-2.14-3.386-5.098-3.386-8.36s1.294-6.22%203.386-8.36%204.988-3.468%208.185-3.467%206.093%201.327%208.185%203.467%203.387%205.098%203.387%208.36-1.294%206.22-3.387%208.36-4.988%203.467-8.185%203.467-6.093-1.327-8.185-3.467%22%20fill%3D%22%23231f20%22%2F%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M20.796%2015.484l-1.7.257-2.31.257-1.496.043-1.454-.043-1.112-.342-.983-1.07-.77-2.18-.17-.47-1.026-.342-.6-.983L8.74%209.2l.47-1.24%201.112-.385.898.428.428.94.513-.086.17-.214-.17-.983-.043-1.24.257-1.7-.01-.977.78-1.246%201.368-.983L16.905.477l2.65.385%202.31%201.667%201.07%201.7.684%201.24.17%203.078-.513%202.65-.94%202.35-.898%201.24%22%20fill%3D%22%23f0d6b7%22%2F%3E%3Cpath%20d%3D%22M19.342%2022.88l-6.114.257v1.026l.513%203.59-.257.3L9.21%2026.6l-.3-.513-.428-4.83-.983-2.907-.214-.684%203.42-2.35%201.07-.428.94%201.154.812.727.94.3.427.128.513%202.223.385.47.983-.342-.684%201.325%203.72%201.753-.47.257%22%20fill%3D%22%23335061%22%2F%3E%3Cpath%20d%3D%22M9.21%207.96l1.112-.385.898.428.428.94.513-.086.128-.513-.257-.983.257-2.352-.214-1.283.77-.898%201.667-1.325-.47-.64-2.352%201.154-.983.77-.556%201.197-.855%201.154-.257%201.368.17%201.454%22%20fill%3D%22%236d6b6d%22%2F%3E%3Cpath%20d%3D%22M10.962%203.94s.64-1.582%203.207-2.35.128-.556.128-.556l-2.78%201.07-1.07%201.07-.47.855.983-.086M9.68%207.66s-.898-2.993%202.523-3.42l-.128-.513-2.35.556-.684%202.223.17%201.454.47-.3%22%20fill%3D%22%23dcd9d8%22%2F%3E%3Cpath%20d%3D%22M11.048%2011.636l.56-.542a.36.36%200%200%200%20.295.329c.043.3.17%202.993%202%204.447.168.133-1.368-.214-1.368-.214l-1.368-2.138m7.738-2.695s.1-1.296.45-1.196.35.45.35.45-.848.548-.798.748%22%20fill%3D%22%23f7e4cd%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M22.464%206.077s-.705.15-.77.77.77.128.898.086M17.3%206.12s-.94.128-.94.727%201.07.556%201.368.3%22%20fill%3D%22%23f7e4cd%22%2F%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M11.475%208.9S9.85%207.916%209.68%208.857s-.556%201.625.257%202.608l-.556-.17-.513-1.325-.17-1.283.983-1.026%201.112.086.64.513.043.64m.77-2.694s.727-3.762%204.404-4.5c3.027-.598%204.617.128%205.216.812%200%200-2.694-3.206-5.26-2.223s-4.446%202.8-4.406%203.943l.043%201.967m9.92-3.25s-1.24-.043-1.283%201.07a.86.86%200%200%200%20.085.342s.984-1.112%201.582-.513m-5.813.628s-.213-1.706-1.668-.714c-.94.64-.855%201.54-.684%201.7s.125.515.255.28.087-1.006.558-1.22%201.24-.453%201.54-.055%22%20fill%3D%22%23f7e4cd%22%2F%3E%3Cpath%20d%3D%22M12.715%2016.04l-4.02%201.796s1.667%206.627.812%208.68l-.6-.214-.043-2.523L7.756%2019l-.47-1.325%204.2-2.822%201.24%201.197m.404%203.655l.57.696v2.565h-.684l-.085-2c0-.214.085-.983.085-.983m.127%203.367l-1.924.085.556.385%201.368.214%22%20fill%3D%22%2349728b%22%2F%3E%3Cg%20fill%3D%22%23335061%22%3E%3Cpath%20d%3D%22M19.727%2022.923l1.582-.043.385%203.934-1.625.214-.342-4.104%22%2F%3E%3Cpath%20d%3D%22M20.155%2022.923l2.394-.128.983-2.608c0-.128.855-3.59.855-3.59l-1.924-2.01-.385-.342-1.026%201.026v3.976l-.898%203.677%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M21.224%2022.624l-1.496.3.214%201.197c.556.257%201.496-.428%201.496-.428m-.172-8.55l2.993%202.223.086-1.026-2.266-2.095-.812.898%22%20fill%3D%22%2349728b%22%2F%3E%3Cpath%20d%3D%22M14.627%2031.346l-.885-3.592-.44-2.65-.073-1.967%204.006-.213h2.493l-.227%204.5.385%203.463-.043.64-3.25.257-1.967-.428%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M19.17%2022.88s-.214%204.447.428%207.6c0%200-1.283.812-3.164%201.026l3.59-.128.428-.257-.513-7.012-.128-1.497%22%20fill%3D%22%23dcd9d8%22%2F%3E%3Cpath%20d%3D%22M21.767%2026.472l1.667-.47%203.164-.17.47-1.454-.855-2.523-.983-.128-1.368.428-1.313.64-.697-.128-.543.213%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M21.737%2025.616s1.112-.513%201.283-.47l-.47-2.352.556-.214.385%202.48%202.608.128s.513-.983.385-2l.47%201.368.043.77-.684%201.026-.77.17-1.283-.043-.428-.556-1.496.214-.47.17%22%20fill%3D%22%23dcd9d8%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M20.056%2022.58l-.94-2.394-.983-1.41s.214-.6.513-.6h.983l.94.342-.085%201.582-.428%202.48%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M20.24%2021.77s-1.197-2.31-1.197-2.65c0%200%20.214-.513.513-.385s.94.47.94.47v-.812l-1.454-.3-.983.128%201.667%203.934.342.043%22%20fill-rule%3D%22evenodd%22%20fill%3D%22%23dcd9d8%22%2F%3E%3Cpath%20d%3D%22M15.01%2016.125l-1.184-.13-1.112-.342v.385l.543.6%201.7.77%22%20fill%3D%22%23fff%22%2F%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M13.1%2016.254s1.325.556%201.753.428l.043.513-1.197-.256-.727-.513.128-.17%22%20fill%3D%22%23dcd9d8%22%2F%3E%3Cpath%20d%3D%22M21.762%2018.323c-.725-.02-1.38-.107-1.955-.27.04-.235-.034-.466.025-.636.16-.115.428-.113.67-.14-.21-.103-.503-.143-.744-.084-.006-.163-.08-.264-.123-.392.408-.146%201.37-1.1%201.912-.784.258.15.368%201.01.388%201.426.017.346-.03.696-.173.88%22%20fill%3D%22%23d33833%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M21.762%2018.323c-.725-.02-1.38-.107-1.955-.27.04-.235-.034-.466.025-.636.16-.115.428-.113.67-.14-.21-.103-.503-.143-.744-.084-.006-.163-.08-.264-.123-.392.408-.146%201.37-1.1%201.912-.784.258.15.368%201.01.388%201.426.017.346-.03.696-.173.88z%22%20fill%3D%22none%22%20stroke%3D%22%23d33833%22%20stroke-width%3D%22.257%22%2F%3E%3Cpath%20d%3D%22M18.293%2017.137l-.006.166c-.227.15-.592.147-.84.272.366.016.655.104.905.23l-.016.415c-.415.284-.794.708-1.283.974-.23.126-1.042.45-1.288.393-.14-.032-.152-.205-.207-.368-.118-.35-.39-.903-.415-1.428-.03-.663-.097-1.773.617-1.637a6.38%206.38%200%200%201%201.692.619c.273.15.43.333.844.365%22%20fill-rule%3D%22evenodd%22%20fill%3D%22%23d33833%22%2F%3E%3Cpath%20d%3D%22M18.293%2017.137l-.006.166c-.227.15-.592.147-.84.272.366.016.655.104.905.23l-.016.415c-.415.284-.794.708-1.283.974-.23.126-1.042.45-1.288.393-.14-.032-.152-.205-.207-.368-.118-.35-.39-.903-.415-1.428-.03-.663-.097-1.773.617-1.637a6.38%206.38%200%200%201%201.692.619c.273.15.43.333.844.365z%22%20fill%3D%22none%22%20stroke%3D%22%23d33833%22%20stroke-width%3D%22.257%22%2F%3E%3Cpath%20d%3D%22M18.705%2017.928c-.063-.36-.137-.464-.108-.78.963-.642%201.143%201.102.108.78%22%20fill-rule%3D%22evenodd%22%20fill%3D%22%23d33833%22%2F%3E%3Cpath%20d%3D%22M18.705%2017.928c-.063-.36-.137-.464-.108-.78.963-.642%201.143%201.102.108.78z%22%20fill%3D%22none%22%20stroke%3D%22%23d33833%22%20stroke-width%3D%22.257%22%2F%3E%3Cpath%20d%3D%22M20.1%2018.22s-.3-.428-.086-.556.428%200%20.556-.214%200-.342.043-.6.257-.3.47-.342.812-.128.898.086l-.257-.77-.513-.17-1.625.94-.086.47v.94m-3.9%201.626l-.166-2c-.1-.995.24-.822%201.102-.822.132%200%20.8.157.86.257.233.476-.4.37.27.73.556.303%201.538-.184%201.313-.858-.126-.15-.655-.047-.845-.145l-1.002-.52c-.425-.22-1.407-.542-1.86-.234-1.148.78.072%202.732.482%203.546%22%20fill%3D%22%23ef3d3a%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M16.735%204.483c-1.165-.27-1.744.488-2.098%201.275-.315-.076-.2-.505-.1-.724.2-.574%201.05-1.337%201.736-1.234.296.045.696.315.472.683M22.413%205.8l.055.002c.263.547.5%201.127.823%201.6-.223.518-1.685.977-1.663.046.316-.138.862-.028%201.143-.205-.162-.445-.396-.824-.36-1.453m-5.08.034c.25.458.33.94.686%201.285.16.156.47.346.317.78a1%201%200%200%201-.45.375c-.555.164-1.85.034-1.4-.658.46.02%201.076.298%201.42-.035-.264-.42-.733-1.255-.56-1.746m4.87%204.655c-.836.537-1.768%201.12-3.138.986-.293-.254-.404-.82-.12-1.195.148.254.055.723.468.793.777.133%201.682-.475%202.24-.688.347-.585-.03-.8-.342-1.176-.64-.77-1.497-1.726-1.466-2.88.258-.187.28.286.318.372.334.78%201.174%201.78%201.787%202.45.15.165.4.323.426.432.08.317-.207.696-.174.907m-11.03-.567c-.262-.15-.324-.808-.632-.827-.44-.027-.36.855-.358%201.37-.303-.275-.356-1.12-.134-1.555-.253-.124-.367.137-.507.23.18-1.312%201.92-.6%201.63.783m11.555%201.1c-.4.74-.94%201.556-2.082%201.58-.023-.24-.04-.603.001-.747.873-.084%201.412-.528%202.08-.833m-5.47.48c.728.383%202.067.424%203.057.395.053.217.052.485.054.75-1.273.063-2.777-.25-3.1-1.145m-.14.714c.504%201.265%202.235%201.12%203.695%201.084-.064.164-.204.358-.377.428-.468.2-1.758.335-2.407-.01-.412-.22-.676-.714-.902-1.004-.1-.14-.652-.498-.008-.5%22%20fill%3D%22%23231f20%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M22.144%2019.196l-1.858%202.945c.294-.864.42-2.31.464-3.414.615-.288%201.142.065%201.394.47%22%20fill%3D%22%2381b0c4%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M25.324%2022.834c-.662.132-1.127.776-1.772.734.355-.5.976-.7%201.772-.734m.292%201.036c-.54.057-1.173.144-1.72.1.26-.396%201.257-.26%201.72-.1m.187.892c-.606.013-1.36.001-1.936-.047.34-.366%201.543-.136%201.936.047%22%20fill%3D%22%23231f20%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M21.003%2027.206c.087.76.39%201.533.35%202.366-.335.113-.528.212-.977.21l-.098-2.467c.22.015.547-.158.724-.1%22%20fill-rule%3D%22evenodd%22%20fill%3D%22%23dcd9d8%22%2F%3E%3Cpath%20d%3D%22M20.026%2015.986c-.304.2-.564.447-.856.66-.648.032-1.002-.045-1.478-.417.008-.03.056-.017.057-.053.694.31%201.576-.126%202.277-.19%22%20fill%3D%22%23f0d6b7%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M16.383%2020.716c.19-.826.938-1.254%201.616-1.71.7.89%201.126%202.03%201.595%203.134-1.108-.334-2.24-.876-3.21-1.425%22%20fill%3D%22%2381b0c4%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M20.28%2027.316c-.028.675.066%201.76.098%202.467.45.001.642-.098.977-.21.038-.834-.264-1.605-.35-2.366-.177-.047-.503.125-.724.1zm-6.992-3.84c.296%202.722.725%205%201.512%207.42%201.746.53%203.85.576%205.394.098-.283-1.36-.16-3.017-.325-4.47l-.232-3.303c-1.87-.39-4.513-.09-6.348.252zm6.8-.235c-.016%201.17.052%202.322.142%203.493l1.17-.204c-.135-1.127-.12-2.395-.395-3.392-.32.003-.6-.004-.918.103zm2.277-.188c-.213-.05-.46-.002-.665.002l.4%203.005c.32.01.49-.14.755-.192.014-.878-.077-2.088-.5-2.815zm3.448%203.15c.668-.162%201.087-.98.9-1.82-.125-.564-.348-1.627-.587-1.988-.176-.267-.655-.617-1.037-.372-.622.398-1.717.514-2.17.995.227.757.298%201.796.392%202.755.777.048%201.732-.214%202.378.064-.45.146-1.036.147-1.425.36.318.154%201.064.123%201.55.005zm-6.208-4.06c-.47-1.103-.895-2.246-1.595-3.134-.678.455-1.425.883-1.616%201.71.97.55%202.103%201.09%203.21%201.425zm1.156-3.415c-.044%201.103-.17%202.55-.464%203.414.7-.893%201.267-1.933%201.858-2.945-.252-.404-.78-.757-1.394-.47zm-1.3-.466c-.266-.03-.49.305-.837.16l-.232.268c.763.92%201.1%202.224%201.7%203.304.316-1.038.28-2.175.35-3.308-.434.028-.675-.393-.98-.425zm-.843-1.112c-.028.315.045.418.108.78%201.035.324.854-1.42-.108-.78zm-1.148-.377a6.38%206.38%200%200%200-1.692-.619c-.714-.137-.647.974-.617%201.637.024.525.297%201.08.415%201.428.056.163.068.335.207.368.246.057%201.057-.267%201.288-.393.49-.267.868-.7%201.283-.974l.016-.415c-.25-.124-.538-.213-.905-.23.25-.125.614-.123.84-.272l.006-.166c-.414-.032-.57-.216-.844-.365zm-4.26-.774c-.37.376%201.038.888%201.487.916-.003-.238.136-.462.108-.633-.533-.094-1.233-.032-1.594-.283zm4.56.176c-.002.037-.05.023-.057.053.476.372.83.45%201.478.417l.856-.66c-.7.063-1.583.498-2.277.19zm4.186%201.27c-.02-.418-.13-1.276-.388-1.426-.542-.316-1.505.638-1.912.784.044.128.118.23.123.392.24-.06.535-.02.744.084-.242.027-.5.025-.67.14-.06.17.014.4-.025.636.574.162%201.23.248%201.955.27.14-.183.19-.533.173-.88zm-9.37-1.082c-.116-.083-.903-1.106-1-1.064-1.423.56-2.753%201.53-3.942%202.45%201.134%202.432%201.59%205.413%201.672%208.285%201.3.607%202.44%201.483%204.2%201.574l-.506-4.088c-.443-.187-1.078.008-1.492-.058-.004-.5.633-.22.686-.554.04-.254-.35-.273-.223-.673.324.118.494.378.84.475.316-.69-.004-1.912.04-2.5.01-.108.054-.6.297-.514.215.076-.012%201.31.01%201.855.02.503-.06%201%20.143%201.306%201.703-.232%203.433-.382%205.275-.432-.405-.174-.887-.34-1.415-.636-.286-.16-1.188-.497-1.27-.77-.132-.433.346-.664.427-1.035-.86.47-1.027-.45-1.23-1.1-.184-.59-.29-1.03-.334-1.37-.74-.353-1.532-.7-2.17-1.163zm8.617-.94c1.186-.575%201.4%202.15.935%203.026.072.262.32.362.42.597l-2.07%203.463c.502-.313%201.22-.056%201.8-.3.216-.085.372-.58.536-.975.45-1.088.922-2.46%201.132-3.5.047-.237.177-.752.148-.963-.052-.377-.563-.657-.824-.9l-1.28-1.212c-.203.3-.638.5-.804.744zM9.855%204.908c-.565.622-.447%201.786-.378%202.615%201.02-.642%202.376.05%202.364%201.143.488-.013.182-.61.094-.993-.288-1.254.486-2.616.035-3.763-.875.066-1.593.424-2.114.998zM13.897%201.3c-1.28.362-2.918%201.292-3.443%202.44.407-.06.69-.264%201.09-.3.152-.01.35.064.525.02.347-.086.64-.865.903-1.155.256-.283.563-.404.773-.662.135-.065.335-.06.342-.263-.06-.063-.12-.1-.2-.1zm6.657.34C19.227.893%2016.98.33%2015.568%201.033c-1.14.568-2.68%201.508-3.205%202.7.49%201.15-.145%202.203-.186%203.37-.022.62.292%201.163.316%201.84-.168.277-.68.31-1.036.292-.12-.598-.33-1.27-.944-1.338-.87-.095-1.508.626-1.548%201.38-.047.886.68%202.355%201.712%202.253.398-.04.496-.44.93-.435.235.47-.363.617-.424.952-.016.087.05.426.088.585.187.774.605%201.775%201.016%202.364.522.747%201.546.86%202.65.933.197-.424.922-.39%201.395-.278-.566-.224-1.093-.768-1.53-1.25-.5-.552-1.01-1.145-1.035-1.867.947%201.314%201.73%202.462%203.452%203.04%201.303.437%202.826-.2%203.827-.904.416-.292.664-.756.96-1.18%201.105-1.6%201.62-3.86%201.508-6.06-.047-.907-.045-1.81-.35-2.42-.318-.638-1.394-1.21-2.024-.632-.117-.62.524-1.004%201.276-.78-.536-.692-1.1-1.524-1.862-1.954zm2.473%2020.467c1.037-.516%202.975-1.388%203.626.002.24.512.522%201.378.646%201.907.176.746-.2%202.314-.957%202.565-.677.22-1.468.208-2.284.044-.096-.08-.203-.22-.278-.364-.583-.023-1.128.03-1.588.27.044.43-.248.5-.52.59-.203.803.405%201.852.26%202.584-.104.522-.746.602-1.217.7-.015.3.02.532.053.777-.108.397-.592.624-1.05.68-1.508.18-3.798.263-5.25-.26-.405-.993-.724-2.2-1.06-3.335-1.415.15-2.56-.61-3.638-1.11-.374-.173-.9-.27-1.03-.566-.135-.288-.08-.84-.113-1.36-.085-1.33-.16-2.615-.5-3.978-.158-.612-.433-1.15-.625-1.74-.177-.546-.487-1.22-.568-1.766-.12-.807.64-.852%201.126-1.202.75-.54%201.34-.84%202.155-1.328.24-.145.968-.5%201.05-.68.164-.334-.282-.805-.4-1.067-.19-.414-.287-.766-.314-1.175-.683-.108-1.2-.514-1.513-.972-.517-.758-.876-2.16-.428-3.227.035-.084.2-.25.236-.378.05-.254-.096-.592-.105-.862-.047-1.387.235-2.58%201.168-3%20.38-1.5%201.735-2.01%203.013-2.762.478-.28%201.004-.46%201.548-.66%201.95-.718%204.944-.583%206.563.642.686.52%201.784%201.615%202.176%202.41%201.037%202.095.963%205.597.238%208.146-.097.342-.24.845-.436%201.256-.138.287-.565.86-.513%201.115.053.262.975.962%201.173%201.153.356.343%201.032.8%201.087%201.232.06.46-.203%201.092-.336%201.537l-1.38%204.18%22%20fill-rule%3D%22evenodd%22%20fill%3D%22%23231f20%22%2F%3E%3Cpath%20d%3D%22M16.107%2011.83c.056-.075.366-.19.8.02%200%200-.513.086-.47.94l-.214-.043s-.22-.776-.114-.918%22%20fill-rule%3D%22evenodd%22%20fill%3D%22%23f7e4cd%22%2F%3E%3Cpath%20d%3D%22M19.856%2019.182c0%20.13-.105.235-.235.235s-.235-.105-.235-.235.105-.235.235-.235.235.105.235.235m.234%201.1c0%20.13-.105.235-.235.235s-.235-.105-.235-.235.105-.235.235-.235.235.105.235.235%22%20fill%3D%22%231d1919%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;fillColor=none;strokeColor=none;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;align=center;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="540" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="jenkins-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Jenkins" vertex="1">
+          <mxGeometry height="18" width="88" x="526" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="terraform" parent="1" style="shape=image;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2060%22%3E%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2210%22%20fill%3D%22%237B42BC%22%2F%3E%3Cg%20transform%3D%22translate%288%208%29%20scale%281.833%29%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M1.44%200v7.575l6.561%203.79V3.787zm21.12%204.227l-6.561%203.791v7.574l6.56-3.787zM8.72%204.23v7.575l6.561%203.787V8.018zm0%208.405v7.575L15.28%2024v-7.578z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;fillColor=none;strokeColor=none;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;align=center;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="870" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="terraform-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Terraform" vertex="1">
+          <mxGeometry height="18" width="88" x="856" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="lam-dep" parent="1" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#FF9900;labelBackgroundColor=none;align=center;html=1;fontSize=11;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="1200" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="lam-dep-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Lambda Deploy" vertex="1">
+          <mxGeometry height="18" width="88" x="1186" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="ver-dep" parent="1" style="shape=image;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2060%22%3E%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2210%22%20fill%3D%22%23111111%22%2F%3E%3Cg%20transform%3D%22translate%288%208%29%20scale%281.833%29%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M24%2022.525H0l12-21.05%2012%2021.05z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E;fillColor=none;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="1530" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="ver-dep-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontSize=11;fontColor=#232F3E;fontStyle=0;overflow=hidden;" value="Vercel Deploy" vertex="1">
+          <mxGeometry height="18" width="88" x="1516" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-bg" parent="1" style="rounded=1;arcSize=5;strokeColor=#CBD5E1;fillColor=#F8FAFC;" value="" vertex="1">
+          <mxGeometry height="246" width="328" x="1440" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=13;fontStyle=1;fontColor=#232F3E;" value="Request Flow" vertex="1">
+          <mxGeometry height="24" width="300" x="1452" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-n0" parent="1" style="ellipse;strokeColor=#232F3E;fillColor=#232F3E;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;html=1;" value="①" vertex="1">
+          <mxGeometry height="20" width="20" x="1452" y="347" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-t0" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#475569;" value="User opens app — HTTPS to Vercel (Next.js)" vertex="1">
+          <mxGeometry height="20" width="280" x="1478" y="347" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-n1" parent="1" style="ellipse;strokeColor=#232F3E;fillColor=#232F3E;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;html=1;" value="②" vertex="1">
+          <mxGeometry height="20" width="20" x="1452" y="371" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#475569;" value="OAuth redirect → Cognito Hosted UI → JWT tokens" vertex="1">
+          <mxGeometry height="20" width="280" x="1478" y="371" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-n2" parent="1" style="ellipse;strokeColor=#232F3E;fillColor=#232F3E;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;html=1;" value="③" vertex="1">
+          <mxGeometry height="20" width="20" x="1452" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-t2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#475569;" value="Amplify attaches JWT → POST /synthesize" vertex="1">
+          <mxGeometry height="20" width="280" x="1478" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-n3" parent="1" style="ellipse;strokeColor=#232F3E;fillColor=#232F3E;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;html=1;" value="④" vertex="1">
+          <mxGeometry height="20" width="20" x="1452" y="419" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-t3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#475569;" value="API Gateway validates JWT, invokes Lambda" vertex="1">
+          <mxGeometry height="20" width="280" x="1478" y="419" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-n4" parent="1" style="ellipse;strokeColor=#232F3E;fillColor=#232F3E;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;html=1;" value="⑤" vertex="1">
+          <mxGeometry height="20" width="20" x="1452" y="443" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-t4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#475569;" value="Lambda calls Polly — neural engine, MP3" vertex="1">
+          <mxGeometry height="20" width="280" x="1478" y="443" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-n5" parent="1" style="ellipse;strokeColor=#232F3E;fillColor=#232F3E;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;html=1;" value="⑥" vertex="1">
+          <mxGeometry height="20" width="20" x="1452" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-t5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#475569;" value="Lambda stores MP3 in private S3 bucket" vertex="1">
+          <mxGeometry height="20" width="280" x="1478" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-n6" parent="1" style="ellipse;strokeColor=#232F3E;fillColor=#232F3E;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;html=1;" value="⑦" vertex="1">
+          <mxGeometry height="20" width="20" x="1452" y="491" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-t6" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#475569;" value="Lambda writes metadata to DynamoDB" vertex="1">
+          <mxGeometry height="20" width="280" x="1478" y="491" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-n7" parent="1" style="ellipse;strokeColor=#232F3E;fillColor=#232F3E;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;html=1;" value="⑧" vertex="1">
+          <mxGeometry height="20" width="20" x="1452" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-t7" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#475569;" value="1-hour pre-signed S3 URL returned to browser" vertex="1">
+          <mxGeometry height="20" width="280" x="1478" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="ce0" edge="1" parent="1" source="github" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#24292E;strokeWidth=2;fontColor=#24292E;fontSize=10;fontStyle=1;" target="jenkins" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce1" edge="1" parent="1" source="jenkins" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#7B42BC;strokeWidth=2;fontColor=#7B42BC;fontSize=10;fontStyle=1;" target="terraform" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce2" edge="1" parent="1" source="terraform" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF9900;strokeWidth=2;fontColor=#FF9900;fontSize=10;fontStyle=1;" target="lam-dep" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ce3" edge="1" parent="1" source="lam-dep" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#94A3B8;strokeWidth=2;fontColor=#94A3B8;fontSize=10;fontStyle=1;" target="ver-dep" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#1D4ED8;strokeWidth=2;fontColor=#1D4ED8;fontSize=10;fontStyle=1;" target="nextjs" value="HTTPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="amplify" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#BF0816;strokeWidth=2;fontColor=#BF0816;fontSize=10;fontStyle=1;" target="cognito" value="OAuth redirect">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="amplify" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E7157B;strokeWidth=2;fontColor=#E7157B;fontSize=10;fontStyle=1;" target="apigw" value="Bearer JWT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="cognito" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;strokeColor=#94A3B8;strokeWidth=1;fontColor=#94A3B8;fontSize=9;fontStyle=2;dashed=1;" target="apigw" value="validates JWT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="apigw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF9900;strokeWidth=2;fontColor=#FF9900;fontSize=10;fontStyle=1;" target="lambda" value="invoke">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="lambda" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#01A88D;strokeWidth=2;fontColor=#01A88D;fontSize=10;fontStyle=1;" target="polly" value="SynthesizeSpeech">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="lambda" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#3F8624;strokeWidth=2;fontColor=#3F8624;fontSize=10;fontStyle=1;" target="s3" value="PutObject · MP3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="lambda" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#4053D6;strokeWidth=2;fontColor=#4053D6;fontSize=10;fontStyle=1;" target="dynamodb" value="PutItem / Query">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#1D4ED8;strokeWidth=1;fontColor=#1D4ED8;fontSize=9;fontStyle=2;dashed=1;" target="user" value="stream MP3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1307" y="870" />
+              <mxPoint x="81" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="iam" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=1;entryDx=0;entryDy=0;strokeColor=#94A3B8;strokeWidth=1;fontColor=#94A3B8;fontSize=9;fontStyle=2;dashed=1;" target="lambda" value="grants permissions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="lambda" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#E05C43;strokeWidth=1;fontColor=#E05C43;fontSize=9;fontStyle=2;dashed=1;" target="cloudwatch" value="logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

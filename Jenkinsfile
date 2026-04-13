@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     AWS_DEFAULT_REGION = 'us-east-1'
-    LAMBDA_FUNCTION    = 'project-polly-handler'
+    LAMBDA_FUNCTION    = 'verbasonare-handler'
     TF_DIR             = 'terraform'
     LAMBDA_DIR         = 'backend/lambda/polly-handler'
   }

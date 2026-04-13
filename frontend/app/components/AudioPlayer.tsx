@@ -11,7 +11,7 @@ export default function AudioPlayer({ url }: Props) {
       <audio controls src={url} className="w-full" />
       <a
         href={url}
-        download="polly-audio.mp3"
+        download="verbasonare-audio.mp3"
         className="mt-3 inline-block text-xs text-indigo-400 hover:text-indigo-300"
       >
         ↓ Download MP3

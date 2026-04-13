@@ -1,88 +1,42 @@
-"use client";
-import { useState } from "react";
-import { synthesizeSpeech } from "../lib/api";
-import AudioPlayer from "./components/AudioPlayer";
+import Link from "next/link";
 
-const VOICES = [
-  { id: "Joanna",  label: "Joanna (Female, US)"   },
-  { id: "Matthew", label: "Matthew (Male, US)"     },
-  { id: "Salli",   label: "Salli (Female, US)"     },
-  { id: "Joey",    label: "Joey (Male, US)"         },
-  { id: "Amy",     label: "Amy (Female, UK)"        },
-  { id: "Brian",   label: "Brian (Male, UK)"        },
-];
-
-export default function HomePage() {
-  const [text,     setText]     = useState("");
-  const [voiceId,  setVoiceId]  = useState("Joanna");
-  const [audioUrl, setAudioUrl] = useState<string | null>(null);
-  const [loading,  setLoading]  = useState(false);
-  const [error,    setError]    = useState<string | null>(null);
-
-  async function handleSynthesize() {
-    setLoading(true);
-    setError(null);
-    setAudioUrl(null);
-    try {
-      const data = await synthesizeSpeech(text, voiceId);
-      setAudioUrl(data.audioUrl);
-    } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : "Something went wrong");
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  const charCount = text.length;
-
+export default function LandingPage() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Text to Speech</h1>
+    <div
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: "url('/VerbaSonare_landscape_centered.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/45" />
 
-      <div className="space-y-3">
-        <textarea
-          rows={6}
-          maxLength={3000}
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder="Enter text to synthesize (max 3000 characters)..."
-          className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 text-sm
-                     placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
-        />
-        <div className="flex items-center justify-between text-xs text-gray-500">
-          <span>{charCount} / 3000</span>
+      {/* Buttons — positioned below the VerbaSonare text in the logo */}
+      <div className="absolute z-10 flex flex-col items-center gap-6" style={{ top: '70%' }}>
+        <p className="text-white/70 tracking-wide" style={{ fontSize: '18px' }}>Converts your texts to speech</p>
+        <div className="flex gap-4">
+          <Link
+            href="/auth?mode=signup"
+            className="px-10 py-3 rounded-lg bg-violet-600 hover:bg-violet-700 text-white font-semibold text-sm tracking-wide transition shadow-lg shadow-violet-900/40"
+          >
+            Sign Up
+          </Link>
+          <Link
+            href="/auth?mode=signin"
+            className="px-10 py-3 rounded-lg border border-white/50 hover:bg-white/10 text-white font-semibold text-sm tracking-wide transition"
+          >
+            Sign In
+          </Link>
         </div>
       </div>
 
-      <div className="flex items-center gap-3">
-        <select
-          value={voiceId}
-          onChange={(e) => setVoiceId(e.target.value)}
-          className="flex-1 rounded-lg bg-gray-800 border border-gray-700 px-3 py-2 text-sm
-                     focus:outline-none focus:ring-2 focus:ring-indigo-500"
-        >
-          {VOICES.map((v) => (
-            <option key={v.id} value={v.id}>{v.label}</option>
-          ))}
-        </select>
-
-        <button
-          onClick={handleSynthesize}
-          disabled={loading || charCount === 0}
-          className="px-5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40
-                     disabled:cursor-not-allowed transition text-sm font-medium"
-        >
-          {loading ? "Synthesizing…" : "Convert →"}
-        </button>
-      </div>
-
-      {error && (
-        <p className="text-sm text-red-400 bg-red-900/20 border border-red-800 rounded-lg px-4 py-3">
-          {error}
-        </p>
-      )}
-
-      {audioUrl && <AudioPlayer url={audioUrl} />}
+      {/* Footer */}
+      <p className="absolute bottom-6 text-xs text-white/35 tracking-widest uppercase">
+        Powered by AWS Free Tier
+      </p>
     </div>
   );
 }

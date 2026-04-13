@@ -7,11 +7,11 @@ variable "aws_region" {
 variable "project_name" {
   description = "Project name used as a prefix for all resources"
   type        = string
-  default     = "project-polly"
+  default     = "verbasonare"
 }
 
 variable "frontend_url" {
   description = "Vercel frontend URL (update after first Vercel deploy)"
   type        = string
-  default     = "https://project-polly-rho.vercel.app"
+  default     = "https://verbasonare-rho.vercel.app"
 }

@@ -2,17 +2,20 @@
 import React from "react";
 import { Amplify } from "aws-amplify";
 
+const cognitoDomain = (process.env.NEXT_PUBLIC_COGNITO_DOMAIN ?? "").replace("https://", "");
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+
 Amplify.configure({
   Auth: {
     Cognito: {
-      userPoolId:       "us-east-1_VsKleKMOt",
-      userPoolClientId: "6e9k91krped2j1rbngqcfcg2ai",
+      userPoolId:       process.env.NEXT_PUBLIC_USER_POOL_ID ?? "",
+      userPoolClientId: process.env.NEXT_PUBLIC_CLIENT_ID ?? "",
       loginWith: {
         oauth: {
-          domain:          "project-polly-auth-039612868851.auth.us-east-1.amazoncognito.com",
+          domain:          cognitoDomain,
           scopes:          ["email", "openid", "profile"],
-          redirectSignIn:  ["https://project-polly-rho.vercel.app", "http://localhost:3000"],
-          redirectSignOut: ["https://project-polly-rho.vercel.app", "http://localhost:3000"],
+          redirectSignIn:  [appUrl, "http://localhost:3000"],
+          redirectSignOut: [appUrl, "http://localhost:3000"],
           responseType:    "code",
         },
       },
