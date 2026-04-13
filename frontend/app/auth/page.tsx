@@ -257,7 +257,7 @@ function AuthForm() {
                 <label className={labelClass}>Email address</label>
                 <input type="email" value={email} onChange={e => setEmail(e.target.value)}
                   placeholder="you@example.com" className={inputClass} />
-                <p className="text-xs text-gray-500 mt-2">We'll send a reset code to this address.</p>
+                <p className="text-xs text-gray-500 mt-2">We will send a reset code to this address.</p>
               </div>
               <button
                 onClick={handleForgot}
